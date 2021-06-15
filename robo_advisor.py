@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 import requests
 import json
-
+#from sengrid import SendGridAPIClient
 
 load_dotenv()
 ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
