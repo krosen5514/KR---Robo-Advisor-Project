@@ -24,7 +24,7 @@ print("REQUESTING STOCK MARKET DATA...")
 date = time_series_data["Meta Data"]["3. Last Refreshed"]
 print("REQUEST AT:", date)
 print("-------------------------")
-#print("LATEST CLOSE:", to_usd(int(time_series_data["Time Series (Daily)"][date]["4. close"])))
+print("LATEST CLOSE:", to_usd(int(float(time_series_data["Time Series (Daily)"][date]["4. close"]))))
 #print("RECENT HIGH:101,000.00")
 # print("RECENT LOW: $99,000.00")
 # print("-------------------------")
@@ -34,5 +34,4 @@ print("-------------------------")
 # print("HAPPY INVESTING!")
 # print("-------------------------")
 #print(Time_series_data)
-
 
