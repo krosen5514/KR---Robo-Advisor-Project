@@ -6,6 +6,9 @@ import requests
 import json
 #from sengrid import SendGridAPIClient
 
+def to_usd(my_number):
+    return f"${my_number:,.2f}"
+
 load_dotenv()
 ALPHAVANTAGE_API_KEY = os.getenv("ALPHAVANTAGE_API_KEY")
 # make a request
@@ -21,8 +24,8 @@ print("REQUESTING STOCK MARKET DATA...")
 date = time_series_data["Meta Data"]["3. Last Refreshed"]
 print("REQUEST AT:", date)
 print("-------------------------")
-print("LATEST CLOSE:",  time_series_data["Time Series (Daily)"][date]["4. close"])
-print("RECENT HIGH: 101,000.00")
+#print("LATEST CLOSE:", to_usd(int(time_series_data["Time Series (Daily)"][date]["4. close"])))
+#print("RECENT HIGH:101,000.00")
 # print("RECENT LOW: $99,000.00")
 # print("-------------------------")
 # print("RECOMMENDATION: BUY!")
